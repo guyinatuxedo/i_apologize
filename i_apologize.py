@@ -56,17 +56,5 @@ class load_modules(gdb.Command):
             gdb.execute(exec_cmd)
 
 
-class load_symbols(gdb.Command):
-    def __init__(self):
-        super(load_symbols, self).__init__("load_symbols", gdb.COMMAND_DATA)
-
-    def invoke(self, arg, from_tty):
-        print("just to wake up")
-        for cmd in cmds:
-            gdb.execute(str(cmd))
-
-
-
 
 load_modules()
-load_symbols()
